@@ -13,6 +13,7 @@
          <class name="com.Solutions.assignment.RestAPITest"/>
          <class name="com.Solutions.assignment.TransportPDFFirstLine"/>
          <class name="com.Solutions.assignment.Map_AssignmentTest"/>
+	  <class name="com.Solutions.assignment.LeadsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
