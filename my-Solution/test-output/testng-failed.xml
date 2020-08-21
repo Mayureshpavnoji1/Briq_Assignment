@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.Solutions.Utilities.ExtentReporterNG"/>
+  </listeners>
+  <test parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="com.Solutions.assignment.Map_AssignmentTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="readMap"/>
+        </methods>
+      </class> <!-- com.Solutions.assignment.Map_AssignmentTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
