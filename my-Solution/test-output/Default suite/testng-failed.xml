@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Solutions.assignment.LeadsTest">
+      <class name="com.Solutions.assignment.Map_rectified">
         <methods>
-          <include name="readLeadsExcelFile"/>
+          <include name="primaryExecutor"/>
         </methods>
-      </class> <!-- com.Solutions.assignment.LeadsTest -->
+      </class> <!-- com.Solutions.assignment.Map_rectified -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

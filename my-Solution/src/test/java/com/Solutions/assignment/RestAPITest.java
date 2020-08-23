@@ -19,7 +19,7 @@ public class RestAPITest {
 		Response response = httprequest.request(Method.GET, "/resource/p4e4-a5a7.json");
 		String responseBody = response.getBody().asString();
 		System.out.println(responseBody);
-
+        
 	}
 
 }

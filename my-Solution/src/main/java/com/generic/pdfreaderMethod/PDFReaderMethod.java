@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
 
 public class PDFReaderMethod {
 static  Properties prop ;
@@ -39,7 +40,7 @@ public void readPDF() throws IOException{
 	}
 
     ArrayList<String> al = new ArrayList<String>(); 
-    try (PDDocument document = PDDocument.load(new File(prop.getProperty("PDFPathStatement")))) {
+    PDDocument document = PDDocument.load(new File(prop.getProperty("PDFPathStatement")));
     	
     	
 
@@ -61,7 +62,7 @@ public void readPDF() throws IOException{
             for (String line : lines) {
                 System.out.println(line);
                 Row row = sheet.createRow(rownum++); 
-                Cell cell = row.createCell(cellnum++);
+             
                 al.add(line);
                 
                 Iterator<String> it = al.iterator();
@@ -70,7 +71,7 @@ public void readPDF() throws IOException{
 					Object fr = it.next();
 					{
                   
-						
+						   Cell cell = row.createCell(cellnum++);
 						
                            if(fr instanceof String)
                                 cell.setCellValue((String)fr);
@@ -82,7 +83,7 @@ public void readPDF() throws IOException{
                    
                    cellnum = 0;
                     
-                
+               
                 
                 
             }
@@ -94,6 +95,5 @@ public void readPDF() throws IOException{
     FileOutputStream out = new FileOutputStream(new File(prop.getProperty("ExcelCreationPathStatement")));
     workbook.write(out);
     out.close();
-}
 }
 }

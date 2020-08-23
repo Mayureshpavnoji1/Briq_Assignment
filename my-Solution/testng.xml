@@ -12,7 +12,10 @@
        <class name="com.Solutions.assignment.ActiveLicenseTest"/>
          <class name="com.Solutions.assignment.RestAPITest"/>
          <class name="com.Solutions.assignment.TransportPDFFirstLine"/>
-         <class name="com.Solutions.assignment.Map_AssignmentTest"/>
+       <!--    <class name="com.Solutions.assignment.Map_AssignmentTest"/> -->
+         <class name="com.Solutions.assignment.LeadsTest"/>
+         <class name="com.Solutions.assignment.Map_rectified"/>
+         
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
