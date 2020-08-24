@@ -11,10 +11,12 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -25,10 +27,19 @@ public class Map_rectified {
 	@Test
 
 	public static void primaryExecutor() throws InterruptedException, IOException {
+		
+
+	
+		    
+		    
+		    
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("disable-infobars");
+
 
 		/* Invoking the Browser */
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 		System.setProperty("webdriver.chrome.driver",("user.dir") + "/src/main/java/com/crm/qa/config/chromedriver.exe");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.navigate().to("https://www.bizjournals.com/milwaukee/feature/crane-watch");

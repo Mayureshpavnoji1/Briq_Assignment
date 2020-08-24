@@ -21,10 +21,18 @@ import org.testng.annotations.Test;
 public class ActiveLicenseTest {
 
 	public static Properties prop;
+	
+    public static  Row row;
+    public static   Cell cell;
 
 	@Test
 	public static void readActiveLicensePDF() throws IOException {
-
+    
+		
+		
+		
+		
+		
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		try {
 			prop = new Properties();
@@ -44,41 +52,79 @@ public class ActiveLicenseTest {
 
 			if (!document.isEncrypted()) {
 
-				PDFTextStripperByArea stripper = new PDFTextStripperByArea();
-				stripper.setSortByPosition(true);
+			
 
 				PDFTextStripper tStripper = new PDFTextStripper();
-
+      
 				String pdfFileInText = tStripper.getText(document);
-				// System.out.println("Text:" + st);
+			
 				int cellnum = 0;
 				int rownum = 0;
 				String lines[] = pdfFileInText.split("\\r\\n");
-
-				for (String line : lines) {
-					System.out.println(line);
-					Row row = sheet.createRow(rownum++);
-					Cell cell = row.createCell(cellnum++);
-					al.add(line);
-
-					Iterator<String> it = al.iterator();
-
-					while (it.hasNext()) {
-						Object fr = it.next();
-						{
-
-							if (fr instanceof String)
-								cell.setCellValue((String) fr);
-							else if (fr instanceof Integer)
-								cell.setCellValue((Integer) fr);
-
-						}
-
-						cellnum = 0;
-
-					}
-
+				
+				for (String words : lines) {
+				String a[] =	words.split(" ");
+				row = sheet.createRow(rownum++);
+				for (String b:a) {
+				
+					
+					cell = row.createCell(cellnum++);
+					cell.setCellValue(b);
+					
 				}
+				
+				cellnum = 0;
+				}
+				
+				 
+
+	/*	
+					
+			    
+			
+						row = sheet.createRow(rownum++);
+						
+						cell = row.createCell(++cellnum);
+						cell.setCellValue(line);
+	
+					
+							cell2 = row.createCell(++cellvalue);
+							cell2.setCellValue(navigator);
+						}
+			}*/
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				/*
+				 * for (String line : lines) {
+				 * 
+				 * System.out.println(line); Row row = sheet.createRow(rownum++); Cell cell =
+				 * row.createCell(cellnum++); al.add(line);
+				 * 
+				 * 
+				 * Iterator<String> it = al.iterator();
+				 * 
+				 * while (it.hasNext()) { Object fr = it.next(); {
+				 * 
+				 * if (fr instanceof String) cell.setCellValue((String) fr); else if (fr
+				 * instanceof Integer) cell.setCellValue((Integer) fr);
+				 * 
+				 * }
+				 * 
+				 * cellnum = 0;
+				 * 
+				 * }
+				 * 
+				 * }
+				 */
 
 			}
 

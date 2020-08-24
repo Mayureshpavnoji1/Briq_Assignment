@@ -42,10 +42,10 @@ public class LeadsTest {
 
 			for (int j = 0; j < row.getLastCellNum(); j++) {
 
-				System.out.print(sh.getRow(i).getCell(j).getStringCellValue() + "\\r\\n");
+		
 
 				counter = counter + 1;
-				jsonObject1.put(counter, sh.getRow(i).getCell(j).getStringCellValue());
+				jsonObject1.put(sh.getRow(0).getCell(j).getStringCellValue(), sh.getRow(i+1).getCell(j).getStringCellValue());
 				try {
 					file = new FileWriter(prop.getProperty("Jasonoutput"));
 					file.write(jsonObject1.toJSONString());

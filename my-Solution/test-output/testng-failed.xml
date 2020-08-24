@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Solutions.assignment.Map_rectified">
+      <class name="com.Solutions.assignment.RestAPITest">
         <methods>
-          <include name="primaryExecutor"/>
+          <include name="getEndPointData"/>
         </methods>
-      </class> <!-- com.Solutions.assignment.Map_rectified -->
+      </class> <!-- com.Solutions.assignment.RestAPITest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

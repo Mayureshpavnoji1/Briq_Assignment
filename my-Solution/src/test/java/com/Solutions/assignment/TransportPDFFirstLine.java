@@ -25,7 +25,7 @@ public class TransportPDFFirstLine {
 
 		String[] line = null;
 
-		try (PDDocument document = PDDocument.load(new File(prop.getProperty("TransportPDFLocation")))) {
+		PDDocument document = PDDocument.load(new File(prop.getProperty("TransportPDFLocation")));
 
 			document.getClass();
 
@@ -43,6 +43,6 @@ public class TransportPDFFirstLine {
 			}
 			System.out.println(line[2]);
 
-		}
+		
 	}
 }
