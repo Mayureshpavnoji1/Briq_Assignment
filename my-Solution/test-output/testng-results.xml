@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-24T17:00:06Z" name="Suite" finished-at="2020-08-24T17:01:40Z" duration-ms="94410">
+  <suite started-at="2020-08-25T19:24:48Z" name="Suite" finished-at="2020-08-25T19:25:39Z" duration-ms="51200">
     <groups>
     </groups>
-    <test started-at="2020-08-24T17:00:06Z" name="Test" finished-at="2020-08-24T17:01:40Z" duration-ms="94410">
+    <test started-at="2020-08-25T19:24:48Z" name="Test" finished-at="2020-08-25T19:25:39Z" duration-ms="51200">
       <class name="com.Solutions.assignment.RestAPITest">
-        <test-method signature="getEndPointData()[pri:0, instance:com.Solutions.assignment.RestAPITest@2e6a8155]" started-at="2020-08-24T22:30:06Z" name="getEndPointData" finished-at="2020-08-24T22:30:25Z" duration-ms="19240" status="PASS">
+        <test-method signature="getEndPointData()[pri:0, instance:com.Solutions.assignment.RestAPITest@2e6a8155]" started-at="2020-08-26T00:54:48Z" name="getEndPointData" finished-at="2020-08-26T00:55:12Z" duration-ms="23757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getEndPointData -->
       </class> <!-- com.Solutions.assignment.RestAPITest -->
-      <class name="com.Solutions.assignment.LeadsTest">
-        <test-method signature="readLeadsExcelFile()[pri:0, instance:com.Solutions.assignment.LeadsTest@52719fb6]" started-at="2020-08-24T22:30:06Z" name="readLeadsExcelFile" finished-at="2020-08-24T22:30:12Z" duration-ms="6397" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readLeadsExcelFile -->
-      </class> <!-- com.Solutions.assignment.LeadsTest -->
       <class name="com.Solutions.assignment.Map_rectified">
-        <test-method signature="primaryExecutor()[pri:0, instance:com.Solutions.assignment.Map_rectified@3012646b]" started-at="2020-08-24T22:30:10Z" name="primaryExecutor" finished-at="2020-08-24T22:31:40Z" duration-ms="90161" status="PASS">
+        <test-method signature="primaryExecutor()[pri:0, instance:com.Solutions.assignment.Map_rectified@3012646b]" started-at="2020-08-26T00:54:51Z" name="primaryExecutor" finished-at="2020-08-26T00:55:39Z" duration-ms="48033" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- primaryExecutor -->
       </class> <!-- com.Solutions.assignment.Map_rectified -->
+      <class name="com.Solutions.assignment.LeadsTest">
+        <test-method signature="readLeadsExcelFile()[pri:0, instance:com.Solutions.assignment.LeadsTest@52719fb6]" started-at="2020-08-26T00:54:48Z" name="readLeadsExcelFile" finished-at="2020-08-26T00:54:53Z" duration-ms="5443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readLeadsExcelFile -->
+      </class> <!-- com.Solutions.assignment.LeadsTest -->
       <class name="com.Solutions.assignment.PDFReaderTest">
-        <test-method signature="pdfReadRunner()[pri:0, instance:com.Solutions.assignment.PDFReaderTest@70e9c95d]" started-at="2020-08-24T22:30:06Z" name="pdfReadRunner" finished-at="2020-08-24T22:30:10Z" duration-ms="4531" status="PASS">
+        <test-method signature="pdfReadRunner()[pri:0, instance:com.Solutions.assignment.PDFReaderTest@70e9c95d]" started-at="2020-08-26T00:54:48Z" name="pdfReadRunner" finished-at="2020-08-26T00:54:53Z" duration-ms="4606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pdfReadRunner -->
       </class> <!-- com.Solutions.assignment.PDFReaderTest -->
       <class name="com.Solutions.assignment.ActiveLicenseTest">
-        <test-method signature="readActiveLicensePDF()[pri:0, instance:com.Solutions.assignment.ActiveLicenseTest@51c668e3]" started-at="2020-08-24T22:30:06Z" name="readActiveLicensePDF" finished-at="2020-08-24T22:30:11Z" duration-ms="5065" status="PASS">
+        <test-method signature="readActiveLicensePDF()[pri:0, instance:com.Solutions.assignment.ActiveLicenseTest@51c668e3]" started-at="2020-08-26T00:54:48Z" name="readActiveLicensePDF" finished-at="2020-08-26T00:54:53Z" duration-ms="4610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readActiveLicensePDF -->
       </class> <!-- com.Solutions.assignment.ActiveLicenseTest -->
       <class name="com.Solutions.assignment.TransportPDFFirstLine">
-        <test-method signature="readFirstLineStatementPDF()[pri:0, instance:com.Solutions.assignment.TransportPDFFirstLine@6221a451]" started-at="2020-08-24T22:30:06Z" name="readFirstLineStatementPDF" finished-at="2020-08-24T22:30:10Z" duration-ms="4080" status="PASS">
+        <test-method signature="readFirstLineStatementPDF()[pri:0, instance:com.Solutions.assignment.TransportPDFFirstLine@6221a451]" started-at="2020-08-26T00:54:48Z" name="readFirstLineStatementPDF" finished-at="2020-08-26T00:54:51Z" duration-ms="3047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFirstLineStatementPDF -->

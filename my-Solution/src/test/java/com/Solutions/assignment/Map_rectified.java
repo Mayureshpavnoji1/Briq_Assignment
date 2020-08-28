@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -22,25 +23,20 @@ import org.testng.annotations.Test;
 
 public class Map_rectified {
 
-	
-
 	@Test
 
 	public static void primaryExecutor() throws InterruptedException, IOException {
-		
 
-	
-		    
-		    
-		    
+		Map<String, Object> prefs = new HashMap<String, Object>();
+		prefs.put("profile.default_content_setting_values.notifications", 2);
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("disable-infobars");
-
+		options.setExperimentalOption("prefs", prefs);
 
 		/* Invoking the Browser */
 
 		WebDriver driver = new ChromeDriver(options);
-		System.setProperty("webdriver.chrome.driver",("user.dir") + "/src/main/java/com/crm/qa/config/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				("user.dir") + "/src/main/java/com/crm/qa/config/chromedriver.exe");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.navigate().to("https://www.bizjournals.com/milwaukee/feature/crane-watch");
 

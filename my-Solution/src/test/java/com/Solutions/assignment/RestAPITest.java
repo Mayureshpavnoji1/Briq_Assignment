@@ -35,7 +35,7 @@ public class RestAPITest {
 		RequestSpecification httprequest = RestAssured.given();
 		Response response = httprequest.request(Method.GET, "/resource/p4e4-a5a7.json");
 		String responseBody = response.getBody().asString();
-		//System.out.println(responseBody);
+		// System.out.println(responseBody);
 
 		XSSFWorkbook workbook = new XSSFWorkbook();
 
@@ -51,13 +51,11 @@ public class RestAPITest {
 		@SuppressWarnings("resource")
 		PrintWriter p = new PrintWriter(fw);
 		p.print(responseBody);
-		
-		
+
 		File json1 = new File("./src/main/java/com/outputFiles/repository/Restoutput.txt");
-		
+
 		ArrayList<String> a = new ArrayList<String>();
 
-	
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(json1);
 		while (sc.hasNextLine()) {
@@ -68,11 +66,11 @@ public class RestAPITest {
 
 		int cellnum = 0;
 		int rownum = sheet.getLastRowNum();
-		row = sheet.createRow(rownum++);
-		for (String c : a) {
-        System.out.println(c);
-			String b[] = c.split(":");
 
+		for (String c : a) {
+			System.out.println(c);
+			String b[] = c.split(":");
+			row = sheet.createRow(rownum++);
 			for (String d : b) {
 
 				cell = row.createCell(cellnum++);
@@ -82,7 +80,7 @@ public class RestAPITest {
 
 		}
 
-		FileOutputStream out = new FileOutputStream(new File(prop.getProperty("RestAPIJsonExcelData")));
+		FileOutputStream out = new FileOutputStream(prop.getProperty("RestAPIJsonExcelData"));
 
 		workbook.write(out);
 		out.close();

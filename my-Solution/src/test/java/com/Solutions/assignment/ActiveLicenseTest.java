@@ -60,7 +60,7 @@ public class ActiveLicenseTest {
 			
 				int cellnum = 0;
 				int rownum = 0;
-				String lines[] = pdfFileInText.split("\\r\\n");
+				String lines[] = pdfFileInText.split("\\n");
 				
 				for (String words : lines) {
 				String a[] =	words.split(" ");
@@ -128,7 +128,7 @@ public class ActiveLicenseTest {
 
 			}
 
-			FileOutputStream out = new FileOutputStream(new File(prop.getProperty("ExcelCreationPathActiveLicense")));
+			FileOutputStream out = new FileOutputStream(prop.getProperty("ExcelCreationPathActiveLicense"));
 			workbook.write(out);
 			out.close();
 

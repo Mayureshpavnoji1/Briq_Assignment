@@ -1,7 +1,4 @@
-/*
- * @autor : Naveen Khunteta
- * 
- */
+
 package com.Solutions.Utilities;
 
 import java.io.File;
