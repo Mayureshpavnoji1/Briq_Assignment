@@ -2,7 +2,6 @@ package com.generic.pdfreaderMethod;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.Alert;
+
 
 public class PDFReaderMethod {
 static  Properties prop ;
@@ -29,15 +28,11 @@ public void readPDF() throws IOException{
     
     XSSFSheet sheet = workbook.createSheet("Statement1 Data");
     
-    try {
+    
 		prop = new Properties();
 		FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm/qa/config/config.properties");
 		prop.load(ip);
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
+	
 
     ArrayList<String> al = new ArrayList<String>(); 
     PDDocument document = PDDocument.load(new File(prop.getProperty("PDFPathStatement")));
@@ -92,7 +87,7 @@ public void readPDF() throws IOException{
 
     }
         
-    FileOutputStream out = new FileOutputStream(new File(prop.getProperty("ExcelCreationPathStatement")));
+    FileOutputStream out = new FileOutputStream(prop.getProperty("ExcelCreationPathStatement"));
     workbook.write(out);
     out.close();
 }

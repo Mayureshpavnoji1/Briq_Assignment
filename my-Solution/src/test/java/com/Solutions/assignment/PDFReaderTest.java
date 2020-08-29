@@ -14,12 +14,8 @@ public class PDFReaderTest extends PDFReaderMethod {
 	
 	@Test()
 	
-	public void pdfReadRunner() throws IOException {
-		
-		
-		readPDF();
-		
-		
+	public void pdfReadRunner() throws IOException {	
+		readPDF();		
 	}
 	
 

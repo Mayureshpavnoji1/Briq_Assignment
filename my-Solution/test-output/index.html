@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.Solutions.assignment.Map_rectified" class="method navigator-link" hash-for-method="outPutPrinter">outPutPrinter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -142,6 +156,29 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.Solutions.assignment.Map_rectified</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="outPutPrinter">
+                  </a> <!-- outPutPrinter -->
+                  <span class="method-name">outPutPrinter</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.Solutions.assignment.HashmapReturn.&lt;init&gt;(HashmapReturn.java:28)
+	at com.Solutions.assignment.Map_rectified.outPutPrinter(Map_rectified.java:114)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -292,36 +329,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'primaryExecutor')
 data.setCell(0, 2, 'com.Solutions.assignment.Map_rectified')
-data.setCell(0, 3, 48033);
+data.setCell(0, 3, 191840);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'getEndPointData')
 data.setCell(1, 2, 'com.Solutions.assignment.RestAPITest')
-data.setCell(1, 3, 23757);
+data.setCell(1, 3, 21787);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'readLeadsExcelFile')
 data.setCell(2, 2, 'com.Solutions.assignment.LeadsTest')
-data.setCell(2, 3, 5443);
+data.setCell(2, 3, 4649);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'readActiveLicensePDF')
 data.setCell(3, 2, 'com.Solutions.assignment.ActiveLicenseTest')
-data.setCell(3, 3, 4610);
+data.setCell(3, 3, 3916);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'pdfReadRunner')
 data.setCell(4, 2, 'com.Solutions.assignment.PDFReaderTest')
-data.setCell(4, 3, 4606);
+data.setCell(4, 3, 3482);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'readFirstLineStatementPDF')
 data.setCell(5, 2, 'com.Solutions.assignment.TransportPDFFirstLine')
-data.setCell(5, 3, 3047);
+data.setCell(5, 3, 2497);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'outPutPrinter')
+data.setCell(6, 2, 'com.Solutions.assignment.Map_rectified')
+data.setCell(6, 3, 587);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -347,6 +388,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.Solutions.assignment.LeadsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">readLeadsExcelFile</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Solutions.assignment.PDFReaderTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">pdfReadRunner</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.Solutions.assignment.RestAPITest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">getEndPointData</span>
@@ -357,36 +412,32 @@ return data;
               <div class="chronological-class-name">com.Solutions.assignment.TransportPDFFirstLine</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">readFirstLineStatementPDF</span>
-                <span class="method-start">4 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.Solutions.assignment.PDFReaderTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">pdfReadRunner</span>
-                <span class="method-start">4 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.Solutions.assignment.LeadsTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">readLeadsExcelFile</span>
-                <span class="method-start">4 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.Solutions.assignment.ActiveLicenseTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">readActiveLicensePDF</span>
-                <span class="method-start">4 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.Solutions.assignment.Map_rectified</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">primaryExecutor</span>
-                <span class="method-start">3067 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">outPutPrinter</span>
+                <span class="method-start">2574 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">primaryExecutor</span>
+                <span class="method-start">3167 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quiteBrowser</span>
+                <span class="method-start">195015 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

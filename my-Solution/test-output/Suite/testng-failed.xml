@@ -6,12 +6,12 @@
   </listeners>
   <test parallel="classes" name="Test(failed)">
     <classes>
-      <class name="com.Solutions.assignment.Map_AssignmentTest">
+      <class name="com.Solutions.assignment.Map_rectified">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="readMap"/>
+          <include name="outPutPrinter"/>
+          <include name="quiteBrowser"/>
         </methods>
-      </class> <!-- com.Solutions.assignment.Map_AssignmentTest -->
+      </class> <!-- com.Solutions.assignment.Map_rectified -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

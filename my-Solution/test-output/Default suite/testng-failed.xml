@@ -5,7 +5,9 @@
     <classes>
       <class name="com.Solutions.assignment.Map_rectified">
         <methods>
-          <include name="HashMapReturn"/>
+          <include name="outPutPrinter"/>
+          <include name="quiteBrowser"/>
+          <include name="primaryExecutor"/>
         </methods>
       </class> <!-- com.Solutions.assignment.Map_rectified -->
     </classes>
